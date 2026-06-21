@@ -1,33 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Pramod - Mouryavanshi Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pramod Mouryavanshi | IT Helpdesk Engineer</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero h2{
+margin-top:10px;
+font-size:28px;
+color:#facc15;
+}
+
+.hero p{
+margin-top:20px;
+font-size:18px;
+max-width:700px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:white;
+color:#2563eb;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+section{
+padding:80px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+font-size:35px;
+color:#38bdf8;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.skill-box{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.project{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.contact{
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+</style>
 </head>
+
 <body>
-    <h1>Pramod Mouryavanshi</h1>
-    <h2>IT Helpdesk Engineer</h2>
 
-    <p>
-        BCA Graduate with 2.5+ years of experience in IT Support,
-        Active Directory, Outlook Configuration, Networking,
-        Windows Troubleshooting and Remote Support.
-    </p>
+<header>
+<div class="hero">
+<h1>Pramod Mouryavanshi</h1>
+<h2>IT Helpdesk Engineer</h2>
 
-    <h3>Skills</h3>
-    <ul>
-        <li>Active Directory</li>
-        <li>Office 365</li>
-        <li>Networking</li>
-        <li>Windows 10/11</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
+<p>
+BCA Graduate with 2.5+ Years Experience in IT Support,
+Active Directory, Outlook Configuration, Networking,
+Windows Troubleshooting and Remote Support.
+</p>
 
-    <h3>Experience</h3>
-    <p>IT Helpdesk Engineer - 2.5+ Years Experience</p>
+<a href="#contact" class="btn">Contact Me</a>
+</div>
+</header>
 
-    <h3>Contact</h3>
-    <p>Email: your-email@example.com</p>
+<section>
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill-box">Active Directory</div>
+
+<div class="skill-box">Office 365</div>
+
+<div class="skill-box">Networking</div>
+
+<div class="skill-box">Windows 10/11</div>
+
+<div class="skill-box">Outlook</div>
+
+<div class="skill-box">Remote Support</div>
+
+<div class="skill-box">HTML</div>
+
+<div class="skill-box">CSS</div>
+
+<div class="skill-box">JavaScript</div>
+
+</div>
+</section>
+
+<section>
+<h2>Experience</h2>
+
+<div class="project">
+<h3>IT Helpdesk Engineer</h3>
+<p>
+2.5+ Years Experience in Technical Support,
+User Management, Ticket Handling, Dialer Support,
+Outlook Configuration, Active Directory and Network Troubleshooting.
+</p>
+</div>
+
+</section>
+
+<section>
+<h2>Projects</h2>
+
+<div class="project">
+<h3>Active Directory Lab</h3>
+<p>Created and managed users, groups and policies in Active Directory.</p>
+</div>
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>Developed personal portfolio using HTML, CSS and JavaScript.</p>
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact</h2>
+
+<p>Email: your-email@gmail.com</p>
+
+<p>Phone: +91 XXXXX XXXXX</p>
+
+<p>Location: Greater Noida, India</p>
+
+</section>
+
+<footer>
+<p>© 2026 Pramod Mouryavanshi | IT Helpdesk Engineer</p>
+</footer>
+
+<script>
+console.log("Portfolio Loaded Successfully");
+</script>
+
 </body>
 </html>
