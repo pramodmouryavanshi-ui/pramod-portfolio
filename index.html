@@ -368,6 +368,58 @@ color:#cbd5e1;
 margin-top:15px;
 font-size:14px;
 }
+  /* BUTTONS */
+
+.hero-buttons{
+margin-top:30px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.resume-btn{
+background:linear-gradient(135deg,#f59e0b,#ef4444);
+}
+
+/* STATS */
+
+.stats{
+padding:80px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat-box{
+background:rgba(255,255,255,.05);
+padding:40px;
+text-align:center;
+border-radius:25px;
+backdrop-filter:blur(20px);
+transition:.4s;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+box-shadow:0 0 40px #00d4ff;
+}
+
+.stat-box h2{
+font-size:50px;
+color:#38bdf8;
+}
+
+.stat-box p{
+margin-top:10px;
+}
+
+/* GLOW EFFECT */
+
+.skill-card:hover,
+.project-card:hover,
+.contact-card:hover{
+transform:translateY(-10px) scale(1.05);
+}
 </style>
 </head>
 
@@ -397,7 +449,7 @@ font-size:14px;
 
 <h1>Pramod Mouryavanshi</h1>
 
-<h2>IT Helpdesk Engineer</h2>
+<h2><span id="typing"></span></h2>
 
 <p>
 Working at iLeads Pvt. Ltd with 1.5+ years of experience in
@@ -498,7 +550,29 @@ Experience: 1.5+ Years
 </div>
 
 </section>
+<section class="stats">
 
+<div class="stat-box">
+<h2 class="counter" data-target="2">0</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-box">
+<h2 class="counter" data-target="100">0</h2>
+<p>Issues Resolved</p>
+</div>
+
+<div class="stat-box">
+<h2 class="counter" data-target="50">0</h2>
+<p>Users Supported</p>
+</div>
+
+<div class="stat-box">
+<h2 class="counter" data-target="10">0</h2>
+<p>Projects</p>
+</div>
+
+</section>
 <!-- PROJECTS -->
 
 <section id="projects" class="section">
@@ -571,7 +645,15 @@ using HTML, CSS and JavaScript.
 <h3>🌐 Website</h3>
 <p>www.mouryavanshi.in</p>
 </div>
+<div class="hero-buttons">
 
+<a href="#contact" class="btn">Contact Me</a>
+
+<a href="resume.pdf" class="btn resume-btn" download>
+Download Resume
+</a>
+
+</div>
 </div>
 
 <div class="social-links">
@@ -634,6 +716,84 @@ card.style.transform="translateY(50px)";
 card.style.transition="0.8s";
 
 });
+    <script>
+
+/* TYPING EFFECT */
+
+const text =
+["IT Helpdesk Engineer",
+"Active Directory Specialist",
+"Office 365 Support",
+"Network Troubleshooter"];
+
+let count=0;
+let index=0;
+let currentText="";
+let letter="";
+
+(function type(){
+
+if(count===text.length){
+count=0;
+}
+
+currentText=text[count];
+
+letter=currentText.slice(0,++index);
+
+document.getElementById("typing").textContent=letter;
+
+if(letter.length===currentText.length){
+
+count++;
+index=0;
+
+setTimeout(type,1500);
+
+}else{
+
+setTimeout(type,100);
+
+}
+
+})();
+
+/* COUNTER */
+
+const counters=document.querySelectorAll('.counter');
+
+counters.forEach(counter=>{
+
+counter.innerText='0';
+
+const updateCounter=()=>{
+
+const target=+counter.getAttribute('data-target');
+
+const c=+counter.innerText;
+
+const increment=target/100;
+
+if(c<target){
+
+counter.innerText=
+`${Math.ceil(c+increment)}`;
+
+setTimeout(updateCounter,30);
+
+}else{
+
+counter.innerText=target;
+
+}
+
+};
+
+updateCounter();
+
+});
+
+</script>
 
 </script>
 </body>
