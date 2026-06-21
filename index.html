@@ -5,188 +5,266 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pramod Mouryavanshi | IT Helpdesk Engineer</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
 background:#0f172a;
 color:white;
+overflow-x:hidden;
 }
 
-header{
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.2);
+backdrop-filter:blur(20px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+/* HERO SECTION */
+
+.hero{
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-text-align:center;
-background:linear-gradient(135deg,#2563eb,#7c3aed);
+padding:0 8%;
+position:relative;
+overflow:hidden;
 }
 
-.hero h1{
-font-size:60px;
+/* 3D BACKGROUND */
+
+.hero::before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+background:linear-gradient(#00d4ff,#8b5cf6);
+border-radius:50%;
+filter:blur(180px);
+top:-250px;
+right:-150px;
+opacity:.7;
 }
 
-.hero h2{
-margin-top:10px;
+.hero::after{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:#00f2fe;
+border-radius:50%;
+filter:blur(180px);
+bottom:-250px;
+left:-150px;
+opacity:.4;
+}
+
+.hero-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+width:100%;
+max-width:1300px;
+z-index:2;
+}
+
+/* LEFT SIDE */
+
+.hero-text{
+max-width:700px;
+}
+
+.hero-text h3{
 font-size:28px;
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.hero-text h1{
+font-size:70px;
+line-height:1.1;
+font-weight:800;
+}
+
+.hero-text h2{
+font-size:35px;
+margin-top:10px;
 color:#facc15;
 }
 
-.hero p{
+.hero-text p{
 margin-top:20px;
 font-size:18px;
-max-width:700px;
+line-height:1.8;
+color:#d1d5db;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:white;
-color:#2563eb;
+margin-top:30px;
+padding:15px 40px;
+background:linear-gradient(135deg,#00d4ff,#8b5cf6);
+border-radius:50px;
 text-decoration:none;
-border-radius:30px;
-font-weight:bold;
+color:white;
+font-weight:600;
+box-shadow:0 0 30px rgba(0,212,255,.5);
+transition:.4s;
 }
 
-section{
-padding:80px 10%;
+.btn:hover{
+transform:translateY(-5px);
 }
 
-h2{
+/* IMAGE */
+
+.hero-image{
+position:relative;
+}
+
+.hero-image img{
+width:420px;
+height:420px;
+object-fit:cover;
+border-radius:50%;
+border:8px solid rgba(255,255,255,.1);
+box-shadow:
+0 0 40px #00d4ff,
+0 0 80px #8b5cf6;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-20px);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-content{
+flex-direction:column-reverse;
 text-align:center;
+}
+
+.hero-image img{
+width:280px;
+height:280px;
 margin-bottom:30px;
-font-size:35px;
-color:#38bdf8;
 }
 
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+.hero-text h1{
+font-size:45px;
 }
 
-.skill-box{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-text-align:center;
+.hero-text h2{
+font-size:24px;
 }
 
-.project{
-background:#1e293b;
-padding:25px;
-border-radius:10px;
-margin-bottom:20px;
+nav ul{
+display:none;
 }
 
-.contact{
-text-align:center;
 }
 
-footer{
-text-align:center;
-padding:20px;
-background:#020617;
-}
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="hero">
+<nav>
+
+<div class="logo">Pramod.</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<h3>Hello, I'm</h3>
+
 <h1>Pramod Mouryavanshi</h1>
+
 <h2>IT Helpdesk Engineer</h2>
 
 <p>
-BCA Graduate with 2.5+ Years Experience in IT Support,
-Active Directory, Outlook Configuration, Networking,
-Windows Troubleshooting and Remote Support.
+Working at iLeads Pvt. Ltd with 1.5+ years of experience in
+IT Support, Active Directory, Outlook Configuration,
+Networking, Windows Troubleshooting and Remote Support.
 </p>
 
 <a href="#contact" class="btn">Contact Me</a>
-</div>
-</header>
-
-<section>
-<h2>Skills</h2>
-
-<div class="skills">
-
-<div class="skill-box">Active Directory</div>
-
-<div class="skill-box">Office 365</div>
-
-<div class="skill-box">Networking</div>
-
-<div class="skill-box">Windows 10/11</div>
-
-<div class="skill-box">Outlook</div>
-
-<div class="skill-box">Remote Support</div>
-
-<div class="skill-box">HTML</div>
-
-<div class="skill-box">CSS</div>
-
-<div class="skill-box">JavaScript</div>
 
 </div>
-</section>
 
-<section>
-<h2>Experience</h2>
+<div class="hero-image">
 
-<div class="project">
-<h3>IT Helpdesk Engineer</h3>
-<p>
-2.5+ Years Experience in Technical Support,
-User Management, Ticket Handling, Dialer Support,
-Outlook Configuration, Active Directory and Network Troubleshooting.
-</p>
+<!-- IMAGE NAME YAHA CHANGE KARNA -->
+<img src="profile.jpg" alt="Pramod">
+
+</div>
+
 </div>
 
 </section>
-
-<section>
-<h2>Projects</h2>
-
-<div class="project">
-<h3>Active Directory Lab</h3>
-<p>Created and managed users, groups and policies in Active Directory.</p>
-</div>
-
-<div class="project">
-<h3>Portfolio Website</h3>
-<p>Developed personal portfolio using HTML, CSS and JavaScript.</p>
-</div>
-
-</section>
-
-<section id="contact" class="contact">
-<h2>Contact</h2>
-
-<p>Email: your-email@gmail.com</p>
-
-<p>Phone: +91 XXXXX XXXXX</p>
-
-<p>Location: Greater Noida, India</p>
-
-</section>
-
-<footer>
-<p>© 2026 Pramod Mouryavanshi | IT Helpdesk Engineer</p>
-</footer>
-
-<script>
-console.log("Portfolio Loaded Successfully");
-</script>
 
 </body>
 </html>
